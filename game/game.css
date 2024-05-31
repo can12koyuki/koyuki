@@ -1,0 +1,510 @@
+/* positionの親 */
+body{
+  position: relative;
+  padding: 5px;
+  padding-left: 10px;
+  text-align: center;
+  overflow: auto;
+  background: linear-gradient(to right, rgb(255, 99, 99, 0.54), rgb(250, 255, 99, 0.54), rgb(99, 255, 107, 0.54), rgb(99, 177, 255, 0.54), rgb(206, 99, 255, 0.54));
+  background-size: 800% 800%;
+  animation: GradietionAnimation 100s ease infinite;
+}  
+@keyframes GradietionAnimation { 
+  0%{background-position:0% 50%}
+  50%{background-position:100% 50%}
+  100%{background-position:0% 50%}
+}
+
+/* 中身div */
+.room {
+  position: fixed;
+  display: grid;
+  grid-template-columns: 30% 40% 30%;
+  gap: 8px;
+  font-size: 22px;
+}
+
+.myName{
+  font-size: 130%;
+}
+.their-name1{
+  font-size: 130%;
+}
+.their-name2{
+  font-size: 130%;
+}
+.their-name3{
+  font-size: 130%;
+}
+.their-name4{
+  font-size: 130%;
+}
+.their-name5{
+  font-size: 130%;
+}
+
+/* 通話時間タイマー */
+.Vtimer{
+  position: fixed;
+  top: 1%;
+  right: 23%;
+  font-size: 300%;
+  font-weight: bold;
+  border: solid;
+  border:3px solid;
+  border-radius:8px;
+  display:inline-block;
+  background-color: white;
+  width: 100px;
+  height: 100px;
+  word-wrap: break-word;
+}
+
+/* ルーム名表示 */
+.heading {
+  position: fixed;
+  top: 1%;
+  right: 50%;
+  border: solid;
+  border:3px solid;
+  border-radius:8px;
+  display:inline-block;
+  background-color: white;
+  font-size: 200%;
+  width: 330px;
+  word-wrap: break-word;
+}
+
+/* ボタンクリック時の動作 */
+.Room-out:active, .mute-btn:active, .chat-btn:active, .chat-box:active, 
+.colorgame-btn:active, .gamestart-btn:active, .re-btn:active, 
+.sel1-btn:active, .sel2-btn:active, .sel3-btn:active, .sel4-btn:active, 
+.next-btn:active, .total-btn:active {
+  box-shadow: none;
+  transform: translateY(5px);
+}
+
+
+/* ルーム退出ボタン */
+.Room-out{
+  position: fixed;
+  right: 2%;
+  bottom: 2%;
+  color: rgb(0, 0, 0);
+  background-color: #619ffd;
+  box-shadow: 0 5px 0 #09658a;
+  font-size: 200%;
+  font-weight: bold;
+  border: 2px solid #09658a;
+  border-radius:40px;
+}
+
+/* ミュートボタン */
+.mute-btn{
+  position: fixed;
+  right: 40%;
+  top: 2%;
+  color: rgb(0, 0, 0);
+  background-color: #619ffd;
+  box-shadow: 0 5px 0 #09658a;
+  font-size: 100%;
+  font-weight: bold;
+  border: 2px solid #09658a;
+  border-radius:40px;
+}
+
+
+/* 自分のカメラ映像 */
+.video{
+  position: fixed;
+  top: 1%;
+  left: 0%;
+  width: 250px;
+}
+.my-video{
+  width: 70%;
+  border:6px solid;
+  border-radius:8px;
+  display:inline-block;
+  border-color:darkblue;
+  background-color: white;
+}
+/* 相手のカメラ映像が映る場所 */
+.remote-streams1 {
+  position: fixed;
+  top: 1%;
+  right: 0%;
+  width: 250px;
+}
+.remote-streams2 {
+  position: fixed;
+  top: 30%;
+  left: 0%;
+  width: 250px;
+}
+.remote-streams3 {
+  position: fixed;
+  top: 30%;
+  right: 0%;
+  width: 250px;
+}
+.remote-streams4 {
+  position: fixed;
+  top: 60%;
+  left: 0%;
+  width: 250px;
+}
+.remote-streams5 {
+  position: fixed;
+  top: 60%;
+  right: 0%;
+  width: 250px;
+}
+/* 相手のカメラ映像のサイズ */
+/* ビデオ映像に直接枠線をつける */
+.their-video1{
+  width: 70%;
+  border:6px solid;
+  border-radius:8px;
+  display:inline-block;
+  border-color:chocolate;
+  background-color: white;
+}
+.their-video2{
+  width: 70%;
+  border:6px solid;
+  border-radius:8px;
+  display:inline-block;
+  border-color:chocolate;
+  background-color: white;
+}
+.their-video3{
+  width: 70%;
+  border:6px solid;
+  border-radius:8px;
+  display:inline-block;
+  border-color:chocolate;
+  background-color: white;
+}
+.their-video4{
+  width: 70%;
+  border:6px solid;
+  border-radius:8px;
+  display:inline-block;
+  border-color:chocolate;
+  background-color: white;
+}
+.their-video5{
+  width: 70%;
+  border:6px solid;
+  border-radius:8px;
+  display:inline-block;
+  border-color:chocolate;
+  background-color: white;
+}
+
+
+/* 改行 */
+pre {
+  white-space: pre-wrap;
+}
+
+/* チャットメッセージ */
+.messages{
+  position: fixed;
+  width: 85%;
+  height: 10%;
+  left: 1%;
+  bottom: 0%;
+  font-size: 180%;
+  text-align: left;
+  font-weight: bold;
+  background-color:rgb(247, 219, 183);
+  border: 1px solid rgb(255, 142, 61);
+}
+/* チャット入力 */
+.chat-box{
+  position: fixed;
+  right: 10%;
+  bottom: 13%;
+  width: 15%;
+  font-size: 150%;
+  font-weight: bold;
+  border: 2px solid #453a3a;
+  border-radius:8px;
+}
+/* チャット送信ボタン */
+.chat-btn{
+  position: fixed;
+  right: 2%;
+  bottom: 13%;
+  font-size: 150%;
+  color: rgb(0, 0, 0);
+  background-color: #ffc400;
+  box-shadow: 0 5px 0 #9e7d11;
+  font-weight: bold;
+  border: 2px solid #9e7d11;
+  border-radius:40px;
+}
+
+
+/* ゲーム関連 */
+/* 色当てゲームボタン */
+.colorgame-btn{
+  position: fixed;
+  right: 40%;
+  top: 40%;
+  font-size: 300%;
+  color: rgb(0, 0, 0);
+  background-color: #1aff00;
+  box-shadow: 0 5px 0 #178f1d;
+  font-weight: bold;
+  border: 2px solid #178f1d;
+  border-radius:40px;
+}
+
+/* ルール説明モーダル */
+.rulemodal {
+  display: none;
+  position: fixed;
+  /* top: 0%; */
+  z-index: 100;
+  height: 100%;
+  width: 100%;
+  text-align: center;
+  margin-top: 0%;
+}
+.rulemodal-content {
+  background-color: #f4f4f4;
+  width: 700px;
+  margin: 4.5% auto;
+}
+.rulemodal-header {
+  max-height: 300px;
+}
+.zoom{
+  width: 70%;
+}
+.carousel-control-prev{
+  background-color: rgb(0, 4, 255);
+  width: 80px;
+}
+.carousel-control-next{
+  background-color: rgb(183, 0, 255);
+  width: 80px;
+}
+
+
+/* ゲームボタン */
+.gamestart-btn{
+  display: inline-block;
+  font-size: 250%;
+  color: rgb(0, 0, 0);
+  background-color: #1aff00;
+  box-shadow: 0 5px 0 #178f1d; /* 影の太さ・色 */
+  font-weight: bold;
+  border: 2px solid #178f1d;
+  border-radius:40px;
+}
+/* ゲームもどるボタン */
+.re-btn{
+  font-size: 250%;
+  color: rgb(0, 0, 0);
+  background-color: #568bff;
+  box-shadow: 0 5px 0 #09658a; /* 影の太さ・色 */
+  font-weight: bold;
+  border: 2px solid #09658a;
+  border-radius:40px;
+}
+
+
+/* 問題表示 */
+.quest{
+  display: none;
+  position: fixed;
+  left: 37%;
+  top: 18%;
+  font-size: 450%;
+  font-weight: bold;
+  width: 400px;
+  background-color: white;
+  border-color:rgb(0, 0, 0);
+  border:3px solid;
+  border-radius:8px;
+  -webkit-text-stroke:1px #000;
+}
+/* 「文字の色は何色？」 */
+.syousai{
+  display: none;
+  position: fixed;
+  top: 7%;
+  left: 40%;
+  font-weight: bold;
+  font-size: 40px;
+}
+.col{
+  font-size: 60px;
+  color: #ffffff;
+  -webkit-text-stroke: 2px #000000;
+}
+
+
+/* 回答選択ボタン */
+.sel1-btn{
+  display: none;
+  position: fixed;
+  left: 22%;
+  top: 42%;
+  width: 300px;
+  height: 140px;
+  font-size: 400%;
+  color: rgb(255, 255, 255);
+  background-color: red;
+  box-shadow: 0 5px 0 #bd1717;
+  font-weight: bold;
+  border: 2px solid #bd1717;
+  border-radius:40px;
+}
+.sel2-btn{
+  display: none;
+  position: fixed;
+  right: 22%;
+  top: 42%;
+  width: 300px;
+  height: 140px;
+  font-size: 400%;
+  color: rgb(255, 255, 255);
+  background-color: blue;
+  box-shadow: 0 5px 0 #1b77ce;
+  font-weight: bold;
+  border: 2px solid #1b77ce;
+  border-radius:40px;
+}
+.sel3-btn{
+  display: none;
+  position: fixed;
+  left: 22%;
+  top: 65%;
+  width: 300px;
+  height: 140px;
+  font-size: 400%;
+  color: rgb(0, 0, 0);
+  background-color: yellow;
+  box-shadow: 0 5px 0 #cec21b;
+  font-weight: bold;
+  border: 2px solid #cec21b;
+  border-radius:40px;
+}
+.sel4-btn{
+  display: none;
+  position: fixed;
+  right: 22%;
+  top: 65%;
+  width: 300px;
+  height: 140px;
+  font-size: 400%;
+  color: rgb(255, 255, 255);
+  background-color: green;
+  box-shadow: 0 5px 0 #4bad42;
+  font-weight: bold;
+  border: 2px solid #4bad42;
+  border-radius:40px;
+}
+
+
+/* 結果表示モーダル */
+/* 正解・不正解表示 */
+.anser{
+  font-size: 120%;
+  -webkit-text-stroke:1px #000;
+}
+/* 答え表示 */
+.Sanser{
+  font-size: 90%;
+  -webkit-text-stroke:1px #000;
+}
+/* 次の問題ボタン */
+.next-btn{
+  color: rgb(0, 0, 0);
+  background-color: #ff8800;
+  box-shadow: 0 5px 0 #d3723a;
+  font-weight: bold;
+  border: 2px solid #d3723a;
+  font-size: 250%;
+  border-radius:40px;
+}
+
+
+/* 総合成績モーダルのもどるボタン */
+.total-btn{
+  color: rgb(0, 0, 0);
+  background-color: #ff8800;
+  box-shadow: 0 5px 0 #d3723a;
+  font-weight: bold;
+  border: 2px solid #d3723a;
+  font-size: 250%;
+  border-radius:40px;
+}
+
+
+/* 結果表示、総合成績モーダル */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 100;
+  /* left: 3%;
+  top: 4%; */
+  margin-top: 19%;
+  margin-left: 20%;
+  height: 100%;
+  width: 100%;
+}
+.modal-content {
+  background-color: #f4f4f4;
+  /* margin: 18%;     */
+  width: 60%;
+}
+.modal-body {
+  color: black;
+  font-weight: bold;
+  max-height: 200px;
+  font-size: 300%;
+}
+
+
+@media screen and (max-width: 1600px){
+  .zoom{
+    width: 70%;
+  }
+  .rulemodal-content {
+    margin: 4% auto;
+  }
+
+}
+@media screen and (max-width: 1300px){
+  .zoom{
+    width: 80%;
+  }
+  .rulemodal-content {
+    margin: 4% auto;
+  } 
+  .modal {
+    margin-top: 27%;
+  }
+  .quest{
+    left: 32%;
+  }
+  /* 「文字の色は何色？」 */
+  .syousai{
+    left: 37%;
+  }
+}
+@media screen and (max-width: 1250px){
+  .zoom{
+    width: 60%;
+  }
+  .rulemodal-content {
+    margin: 6% auto;
+  } 
+}
+
