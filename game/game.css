@@ -282,9 +282,6 @@ pre {
 .rulemodal-header {
   max-height: 300px;
 }
-.zoom{
-  width: 70%;
-}
 .carousel-control-prev{
   background-color: rgb(0, 4, 255);
   width: 80px;
@@ -322,7 +319,7 @@ pre {
 .quest{
   display: none;
   position: fixed;
-  left: 37%;
+  /* left: 37%; */
   top: 18%;
   font-size: 450%;
   font-weight: bold;
@@ -338,7 +335,6 @@ pre {
   display: none;
   position: fixed;
   top: 7%;
-  left: 40%;
   font-weight: bold;
   font-size: 40px;
 }
@@ -454,7 +450,6 @@ pre {
   z-index: 100;
   /* left: 3%;
   top: 4%; */
-  margin-top: 19%;
   margin-left: 20%;
   height: 100%;
   width: 100%;
@@ -474,20 +469,54 @@ pre {
 
 @media screen and (max-width: 1600px){
   .zoom{
-    width: 70%;
+    width: 80%;
   }
   .rulemodal-content {
     margin: 4% auto;
   }
+  .modal {
+    margin-top: 19%;
+  }
+  .quest{
+    left: 37%;
+  }
+  /* 「文字の色は何色？」 */
+  .syousai{
+    left: 40%;
+  }
 
 }
-@media screen and (max-width: 1300px){
+@media screen and (max-width: 1400px){
   .zoom{
     width: 80%;
   }
   .rulemodal-content {
     margin: 4% auto;
   } 
+  .modal {
+    margin-top: 22%;
+  }
+  .quest{
+    left: 35%;
+  }
+  /* 「文字の色は何色？」 */
+  .syousai{
+    left: 39%;
+  }
+}
+@media screen and (max-width: 1200px){
+  .modal {
+    margin-top: 24%;
+  }
+  .quest{
+    left: 33%;
+  }
+  /* 「文字の色は何色？」 */
+  .syousai{
+    left: 37%;
+  }
+}
+@media screen and (max-width: 1150px){
   .modal {
     margin-top: 27%;
   }
@@ -501,7 +530,7 @@ pre {
 }
 @media screen and (max-width: 1250px){
   .zoom{
-    width: 60%;
+    width: 70%;
   }
   .rulemodal-content {
     margin: 6% auto;
